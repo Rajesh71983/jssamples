@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Cookie Test Suite</title>
+		
+		<script src="src/js.cookie.js"></script>
+	</head>
+	<body>
+		
+	<script>
+	var Cookies2 = Cookies.noConflict();
+		Cookies2.set('firstCookie2', '15', { path: '' });
+		Cookies2.set('firstCookie22', '150', { path: '' });
+		console.log(Cookies2.get('firstCookie2'));
+		Cookies2.set('details2', { foo: 'bar',foo2:'bar3' }, { path: '' });
+		console.log(Cookies2.get());
+		
+		var allCookies = Cookies2.get();
+		console.log(allCookies.firstCookie2);
+		Cookies2.remove('firstCookie2');
+		console.log(Cookies2.get('firstCookie2'));
+		
+		var detailsCookie = Cookies2.getJSON('details2');
+		
+		console.log(detailsCookie.foo);
+	</script>	
+	</body>
+</html>
