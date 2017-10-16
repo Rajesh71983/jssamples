@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="moment.js"></script>
+	<script src="moment-timezone-with-data.js"></script>
+	<script type="text/javascript">
+		var currentTime = new Date();
+		var a = moment.tz("2017-10-16 01:39", "Asia/Kolkata");
+		//var a = moment.tz(, "America/Chicago");
+		var b = moment.tz("May 12th 2014 8PM", "MMM Do YYYY hA", "America/Toronto");
+		var c = moment.tz(1403454068850, "America/Toronto");
+		//console.log(a.format()); // 2013-11-18T11:55:00-05:00
+		//console.log(b.format()); // 2014-05-12T20:00:00-04:00
+		//console.log(c.format()); // 2014-06-22T12:21:08-04:00
+		var curdate = new Date();
+
+		alert(moment(moment.tz("2017-10-16 01:39", "Asia/Kolkata")).tz('America/Los_Angeles').format('h:mm:ss A z')); //12 hrs format
+		//alert(moment(a).tz('America/Los_Angeles').format('H:mm:ss A z'));  24 hrs format
+		//+moment.tz('America/Los_Angeles').zoneName() get zone name
+		//moment.tz.guess() guess user zone
+
+		//console.log();
+    
+/* not related to moment. related to core js*/    
+var current_date = new Date();
+var sign = (current_date.getTimezoneOffset() > 0) ? "-" : "+";
+var offset = Math.abs(current_date.getTimezoneOffset());
+var hours = Math.floor(offset / 60);
+var minutes = offset % 60;
+    hours = (hours < 10) ? '0' + hours : hours;
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+var userTimeZone = sign + hours + ":" + minutes;
+var year = current_date.getFullYear();
+var month = current_date.getMonth() + 1;
+    month = ( month < 10)  ?  "0"+month : month;
+var day  = current_date.getDate();
+    day = ( day < 10)  ?  "0"+day : day;
+var curr_hours = current_date.getHours();
+    curr_hours = ( curr_hours < 10 ) ?  "0"+curr_hours : curr_hours; 
+var curr_minutes = current_date.getMinutes();
+    curr_minutes = ( curr_minutes < 10)  ?  "0"+curr_minutes : curr_minutes; 
+var curr_seconds = current_date.getSeconds();
+    curr_seconds = ( curr_seconds < 10)  ?  "0"+curr_seconds : curr_seconds;                     
+
+var currentDateTime = year + "-" + ((month < 10) ? "0"+month : month) + "-" + day +" "+curr_hours+":"+curr_minutes+":"+curr_seconds;
+
+console.log(currentDateTime);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
