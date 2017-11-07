@@ -4,7 +4,6 @@
 	<meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />	
 	<title>DateTime Test</title>
 	<script src="../contrib/jquery-1.9.1.js"></script>
-
 	<script src="../contrib/hammerjs/hammer.min.js"></script>
 	<script src="../contrib/hammerjs/hammer.fakemultitouch.js"></script>
 
