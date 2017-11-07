@@ -24,6 +24,9 @@
      alert($("#cars")[0].value);
      console.log($("#cars")[0].options); //get options
   }
+  var items = document.getElementById('cars').options;
+  items[1].style.color ='red'; // set color
+
   </script>
 </body>
 </html>
